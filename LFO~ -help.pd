@@ -1,0 +1,14 @@
+#N canvas 1104 227 560 494 10;
+#X obj -931 -387 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -931 -63 wsprobe~;
+#X obj -932 -293 LFO~;
+#X text -819 -394 LFO~ stands for Low Frequency Oscillator. It produces
+Sine or Square wave by controlling Speed (in Hertz) and Depth (which
+specifies the magnitude). The external inputs are Speed \, Depth and
+Reset \, where the external outputs are the Output signal \, Speed
+and Depth.;
+#X text -858 -65 <- tab wsprobe to see the oscillating signals in either
+sine wave or square wave;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
