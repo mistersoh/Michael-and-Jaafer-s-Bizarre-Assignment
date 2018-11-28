@@ -1,0 +1,6 @@
+question 1. in voiced, we can see fundamental resonances and other formants and has bigger amplitudes and wavelength. On the other hand, unvoiced's spectrum does not have formants , just the energies spread out across the high frequencies and in the waveform, we can see low amplitudes and wavelength but higher frequancies.
+
+question 2. High frequencies because they are the main ones that are filtered by the low pass. The fricitive sounds were the most affected because frictive sounds have generally have more energy at higher frequency sounds.
+
+Question 3. because the the majority of consonants have high frequency sounds and holds most information, our brain fills the rest of information based on what we got.
+
