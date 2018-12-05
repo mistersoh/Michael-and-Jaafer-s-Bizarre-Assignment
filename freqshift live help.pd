@@ -1,0 +1,2 @@
+#N canvas 806 81 450 300 10;
+#X obj 90 42 freqshift;
