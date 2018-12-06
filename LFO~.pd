@@ -1,7 +1,7 @@
 #N canvas 693 100 667 691 10;
 #X obj 294 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 9 45 \; pd dsp 1;
+#X msg 9 57 \; pd dsp 1;
 #X obj 95 141 hsl 128 15 0 50 0 0 empty empty SPEED -2 -8 0 10 -262144
 -1 -1 6350 1;
 #X obj 97 191 hsl 128 15 0 1 0 0 empty empty DEPTH -2 -8 0 10 -262144
@@ -27,18 +27,18 @@
 #X restore 371 29 graph;
 #X obj 92 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 86 452 clip~ -1 1;
-#X obj 87 575 dac~;
-#X obj 331 166 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+#X obj 238 360 clip~ -1 1;
+#X obj 257 476 dac~;
+#X obj 331 136 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X obj 85 326 osc~ 440;
-#X obj 291 578 wsprobe~;
-#X msg 91 64 25;
+#X obj 240 294 osc~ 440;
+#X obj 358 476 wsprobe~;
+#X msg 92 64 25;
 #X msg 145 65 0.5;
 #X text 91 158 0;
 #X text 215 159 50;
-#X text 90 209 0;
-#X text 222 206 1;
+#X text 144 201 0;
+#X text 276 198 1;
 #X text 293 101 RESET;
 #X msg 263 60 0.5;
 #X msg 299 517 100000;
