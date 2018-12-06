@@ -7,12 +7,14 @@
 #X msg 135 116 open speech.wav;
 #X obj 136 170 readsf~;
 #X obj 131 370 *~;
-#X obj 253 98 LFO~;
 #X obj 98 457 output~;
 #X obj 227 452 wsprobe~;
 #X obj 260 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 345 251 sig~;
+#X obj 253 98 LFO~;
+#X obj 276 292 +~;
+#X obj 276 329 *~ 0.5;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;
@@ -21,9 +23,12 @@
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 5 1 1 0;
-#X connect 6 0 9 0;
-#X connect 6 0 8 1;
 #X connect 6 0 8 0;
-#X connect 7 0 6 1;
-#X connect 7 2 11 0;
-#X connect 10 0 7 0;
+#X connect 6 0 7 1;
+#X connect 6 0 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 12 1;
+#X connect 11 0 12 0;
+#X connect 11 0 6 1;
+#X connect 11 2 10 0;
+#X connect 12 0 13 0;
