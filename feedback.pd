@@ -1,4 +1,4 @@
-#N canvas 1345 318 524 597 10;
+#N canvas 738 35 524 597 10;
 #X obj 144 16 loadbang;
 #X obj 141 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -8,13 +8,13 @@
 #X obj 143 157 readsf~;
 #X obj 198 352 sig~;
 #X floatatom 194 311 5 0 0 0 - - -;
-#X obj 182 263 hsl 128 15 -1000 1000 0 0 empty empty delay -2 -8 0
-10 -262144 -1 -1 6350 1;
+#X obj 182 263 hsl 128 15 1 1000 0 0 empty empty delay -2 -8 0 10 -262144
+-1 -1 1900 1;
 #X obj 153 552 output~;
 #X obj 240 550 wsprobe~;
 #X obj 195 397 vd~ delayline;
-#X obj 339 373 hsl 128 15 0 127 0 0 empty empty feedback -2 -8 0 10
--262144 -1 -1 0 1;
+#X obj 339 373 hsl 128 15 0 1 0 0 empty empty feedback -2 -8 0 10 -262144
+-1 -1 11400 1;
 #X floatatom 344 416 5 0 0 0 - - -;
 #X obj 338 460 sig~;
 #X obj 334 501 *~;
