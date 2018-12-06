@@ -53,11 +53,11 @@
 #X obj 825 315 *~ 0.5;
 #X obj 811 339 *~;
 #X text 76 210 Frequency Shifting;
-#X text 387 246;
+#X text 387 246 comment;
 #X text 368 208 Delay;
 #X text 546 208 Feedback;
-#X text 804 243;
 #X text 795 211 LFO;
+#X text 782 241;
 #X connect 0 0 1 0;
 #X connect 0 0 42 0;
 #X connect 1 0 11 0;
