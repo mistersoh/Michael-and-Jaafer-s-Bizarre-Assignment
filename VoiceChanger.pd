@@ -1,17 +1,17 @@
-#N canvas 0 0 1366 686 10;
+#N canvas -9 -9 1920 976 10;
 #X obj 478 -116 loadbang;
 #X msg 478 -79 0;
 #X floatatom 615 27 5 0 0 0 - - -;
 #X obj 481 28 hsl 128 15 -1000 1000 0 0 empty empty Frequency_Shift
--2 -8 0 10 -262144 -1 -1 6350 1;
+-2 -8 0 10 -262144 -1 -1 3600 1;
 #X floatatom 615 100 5 0 0 0 - - -;
 #X obj 480 101 hsl 128 15 0 1000 0 0 empty empty Delay -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 2000 1;
 #X obj 481 147 hsl 128 15 0 1 0 0 empty empty Feedback -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 8600 1;
 #X floatatom 615 147 5 0 0 0 - - -;
 #X obj 451 20 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 450 90 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj 845 12 LFO~;
@@ -21,7 +21,7 @@
 #X msg 143 101 start;
 #X msg 140 132 stop;
 #X obj 314 15 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 774 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 773 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -31,7 +31,7 @@
 #X text 694 16 Activate LFO;
 #X text 700 47 Disable LFO;
 #X obj 773 86 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X text 756 68 Tremolo;
 #X text 728 118 Ring modulation;
 #X text 312 34 Open .wav file;
@@ -42,66 +42,66 @@
 #X text 430 103 ON;
 #X text 430 146 ON;
 #X obj 481 64 hsl 128 15 0 1 0 0 empty empty Mixer -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #X obj 450 131 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X msg 314 -78 1;
-#X obj 399 632 *~;
-#X obj 399 662 -~;
-#X obj 442 632 *~;
-#X obj 444 569 cos~;
-#X obj 483 602 cos~;
-#X obj 445 534 phasor~;
-#X obj 482 567 +~ -0.25;
-#X obj 445 499 sig~;
+#X obj 399 697 *~;
+#X obj 399 727 -~;
+#X obj 442 697 *~;
+#X obj 444 634 cos~;
+#X obj 483 667 cos~;
+#X obj 445 599 phasor~;
+#X obj 482 632 +~ -0.25;
+#X obj 445 564 sig~;
 #X obj 783 279 output~;
-#X obj 398 602 hilbert~;
-#X obj 397 407 adc~;
-#X obj 615 501 sig~;
-#X obj 606 533 vd~ delayline;
-#X obj 776 511 sig~;
-#X obj 605 600 *~;
-#X obj 604 631 s~ feedback;
-#X obj 414 707 r~ feedback;
-#X obj 399 739 delwrite~ delayline 1000;
-#X obj 605 566 +~;
-#X obj 333 450 route 0;
-#X obj 349 516 *~;
-#X msg 333 473 0;
-#X msg 372 472 1;
-#X obj 540 452 route 0;
-#X obj 554 517 *~;
-#X msg 540 475 0;
-#X msg 577 475 1;
-#X obj 707 453 route 0;
-#X obj 713 528 *~;
-#X msg 707 476 0;
-#X msg 746 475 1;
-#X obj 1138 456 sig~;
-#X obj 999 472 +~;
-#X obj 999 509 *~ 0.5;
-#X obj 830 687 *~;
-#X text 423 395 Frequency Shifting;
-#X text 573 386 Delay;
-#X text 741 394 Feedback;
-#X obj 398 553 *~;
-#X obj 859 442 route 0;
-#X obj 845 567 *~;
-#X msg 859 476 0;
-#X msg 888 477 1;
-#X obj 1000 567 *~;
-#X msg 951 478 0;
-#X msg 921 477 1;
-#X text 993 440 Tremolo;
-#X text 818 543 Ring modulation;
+#X obj 398 667 hilbert~;
+#X obj 397 472 adc~;
+#X obj 615 566 sig~;
+#X obj 606 598 vd~ delayline;
+#X obj 776 576 sig~;
+#X obj 605 665 *~;
+#X obj 604 696 s~ feedback;
+#X obj 414 772 r~ feedback;
+#X obj 399 804 delwrite~ delayline 1000;
+#X obj 605 631 +~;
+#X obj 333 515 route 0;
+#X obj 349 581 *~;
+#X msg 333 538 0;
+#X msg 372 537 1;
+#X obj 540 517 route 0;
+#X obj 554 582 *~;
+#X msg 540 540 0;
+#X msg 577 540 1;
+#X obj 707 518 route 0;
+#X obj 713 593 *~;
+#X msg 707 541 0;
+#X msg 746 540 1;
+#X obj 1138 521 sig~;
+#X obj 999 537 +~;
+#X obj 999 574 *~ 0.5;
+#X obj 830 752 *~;
+#X text 423 460 Frequency Shifting;
+#X text 573 451 Delay;
+#X text 741 459 Feedback;
+#X obj 398 618 *~;
+#X obj 859 507 route 0;
+#X obj 845 632 *~;
+#X msg 859 541 0;
+#X msg 888 542 1;
+#X obj 1000 632 *~;
+#X msg 951 543 0;
+#X msg 921 542 1;
+#X text 993 505 Tremolo;
+#X text 818 608 Ring modulation;
 #X floatatom 615 64 5 0 0 0 - - -;
 #X floatatom 661 64 5 0 0 0 - - -;
 #X obj 534 -57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 600 -42 -;
 #X msg 571 -42 1;
-#X obj 431 687 *~;
-#X obj 398 688 *~;
+#X obj 431 752 *~;
+#X obj 398 753 *~;
 #X msg 661 -76 1;
 #X text 577 -62 Mixer;
 #X obj 36 30 s File Hradio;
@@ -111,71 +111,92 @@
 #X obj 40 118 s File Start;
 #X obj 46 149 s File Stop;
 #X obj 693 -31 s FreqShift;
-#X obj 445 420 r FreqShift;
-#X obj 400 328 s Delay;
-#X obj 540 414 r Delay;
-#X obj 450 328 s Feedback;
-#X obj 707 415 r Feedback;
+#X obj 445 485 r FreqShift;
+#X obj 400 423 s Delay;
+#X obj 540 479 r Delay;
+#X obj 450 423 s Feedback;
+#X obj 707 480 r Feedback;
 #X msg 773 -71 0;
-#X obj 635 337 s FeedSig;
-#X obj 776 487 r FeedSig;
-#X obj 703 337 s Mixer a;
-#X floatatom 246 672 5 0 0 0 - - -;
-#X obj 231 693 -;
-#X msg 216 671 1;
-#X floatatom 231 715 5 0 0 0 - - -;
-#X obj 216 650 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 635 362 s FeedSig;
+#X obj 776 552 r FeedSig;
+#X obj 703 362 s Mixer a;
+#X floatatom 246 737 5 0 0 0 - - -;
+#X obj 231 758 -;
+#X msg 216 736 1;
+#X floatatom 231 780 5 0 0 0 - - -;
+#X obj 216 715 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 246 649 r Mixer a;
-#X text 187 692 Mixer;
-#X obj 829 731 s~ freqfilter;
+#X obj 246 714 r Mixer a;
+#X text 187 757 Mixer;
+#X obj 829 796 s~ freqfilter;
 #X obj 127 154 r~ freqfilter;
-#X obj 187 584 readsf~;
-#X msg 187 525 open \$1;
-#X obj 187 498 openpanel;
-#X obj 89 505 route 0;
+#X obj 187 649 readsf~;
+#X msg 187 590 open \$1;
+#X obj 187 563 openpanel;
+#X obj 89 570 route 0;
 #X msg 89 536 0;
-#X msg 128 536 1;
-#X obj 89 454 r File Hradio;
-#X obj 187 455 r File Bang;
-#X obj 71 567 r File Start;
-#X obj 71 592 r File Stop;
-#X text 143 424 File Reading;
+#X msg 128 601 1;
+#X obj 89 519 r File Hradio;
+#X obj 187 520 r File Bang;
+#X obj 71 632 r File Start;
+#X obj 71 657 r File Stop;
+#X text 143 489 File Reading;
 #X obj 314 86 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 313 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 311 68 Start;
 #X text 312 100 Stop;
-#X text 354 389 Voice Input;
+#X text 354 454 Voice Input;
 #X text 298 153 Presets;
-#X obj 313 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 316 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 272 204 Dalek;
-#X obj 163 221 s Dalek B;
-#X obj 791 -31 r Dalek B;
+#X text 279 212 Dalek;
+#X obj 52 230 s Dalek B;
+#X obj 785 -106 r Dalek B;
 #X msg 725 -60 0.75;
-#X msg 347 204 1;
+#X msg 143 228 1;
 #X msg 692 -59 450;
-#X text 268 179 Normal;
-#X obj 314 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 275 187 Normal;
+#X obj 317 187 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 157 194 s Normal B;
-#X obj 858 -31 r Normal B;
-#X obj 313 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 46 203 s Normal B;
+#X obj 852 -106 r Normal B;
+#X obj 316 239 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 259 231 Muffled;
+#X text 266 239 Muffled;
 #X obj 456 172 frequencyfilter~;
-#X msg 347 229 2;
-#X msg 376 229 300;
-#X msg 348 178 0;
-#X obj 312 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 143 253 2;
+#X msg 172 253 300;
+#X msg 144 202 0;
+#X obj 315 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 277 253 Echo;
-#X msg 347 255 1;
-#X msg 377 255 250;
+#X text 284 261 Echo;
+#X msg 143 279 1;
+#X msg 173 279 250;
 #X text 448 -10 Advanced Settings;
 #X obj 783 153 GraphicEqualiser~;
+#X obj 399 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 339 211 Kidnapper;
+#X msg 138 333 -433;
+#X msg 176 333 1;
+#X obj 924 -106 r Kidnapper B;
+#X obj 42 336 s Kidnapper B;
+#X msg 924 -84 1;
+#X obj 399 236 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 370 234 C3PO;
+#X msg 138 354 55.11;
+#X msg 220 357 0.67;
+#X msg 180 355 1;
+#X obj 398 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 356 259 Wall-E;
+#X msg 138 375 1000;
+#X msg 175 376 1;
+#X obj 59 378 s Wall-E B;
+#X obj 1018 -106 r Wall-E B;
 #X connect 0 0 1 0;
 #X connect 0 0 34 0;
 #X connect 0 0 104 0;
@@ -327,4 +348,27 @@
 #X connect 154 0 5 0;
 #X connect 156 0 43 0;
 #X connect 156 0 43 1;
-#X coords 0 -1 1 1 1100 330 1 250 -10;
+#X connect 157 0 159 0;
+#X connect 157 0 162 0;
+#X connect 157 0 160 0;
+#X connect 159 0 3 0;
+#X connect 160 0 32 0;
+#X connect 160 0 8 0;
+#X connect 161 0 163 0;
+#X connect 161 0 16 0;
+#X connect 163 0 22 0;
+#X connect 164 0 168 0;
+#X connect 164 0 166 0;
+#X connect 164 0 167 0;
+#X connect 166 0 3 0;
+#X connect 167 0 32 0;
+#X connect 168 0 8 0;
+#X connect 169 0 171 0;
+#X connect 169 0 172 0;
+#X connect 169 0 173 0;
+#X connect 171 0 3 0;
+#X connect 172 0 32 0;
+#X connect 172 0 8 0;
+#X connect 174 0 163 0;
+#X connect 174 0 16 0;
+#X coords 0 -1 1 1 1100 350 1 250 -10;
