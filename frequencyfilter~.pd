@@ -1,4 +1,4 @@
-#N canvas 646 43 986 844 10;
+#N canvas 662 170 986 844 10;
 #X obj 175 655 output~;
 #X floatatom 487 -89 5 0 0 0 - - -;
 #X obj 550 -89 s freq;
@@ -38,6 +38,8 @@
 #X text 233 -82 High pass;
 #X text 233 -66 Low pass;
 #X text 236 -49 Band pass;
+#X obj 181 -110 inlet;
+#X obj 334 -17 inlet;
 #X connect 1 0 2 0;
 #X connect 3 0 13 0;
 #X connect 4 0 3 1;
@@ -94,4 +96,6 @@
 #X connect 30 0 8 0;
 #X connect 30 0 28 0;
 #X connect 31 0 1 0;
+#X connect 36 0 11 0;
+#X connect 37 0 31 0;
 #X coords 0 -1 1 1 320 100 1 220 -120;
