@@ -1,6 +1,4 @@
-#N canvas 608 95 560 494 10;
-#X obj -931 -387 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#N canvas 732 76 560 494 10;
 #X obj -931 -63 wsprobe~;
 #X obj -932 -293 LFO~;
 #X text -819 -394 LFO~ stands for Low Frequency Oscillator. It produces
@@ -12,7 +10,6 @@ and Depth.;
 sine wave or square wave;
 #X obj -820 -123 sigmund~ env;
 #X floatatom -820 -88 5 0 0 0 - - -;
-#X connect 0 0 2 0;
-#X connect 2 0 1 0;
-#X connect 2 0 5 0;
-#X connect 5 0 6 0;
+#X connect 1 0 0 0;
+#X connect 1 0 4 0;
+#X connect 4 0 5 0;
